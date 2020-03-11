@@ -38,18 +38,8 @@ matrix:
           - tox --installpkg ./dist/djangorestframework-*.whl
           - tox  # test sdist
 
-      - python: "3.7"
-        env: DOCS=links
-        script:
-          - pip install -r requirements/requirements-documentation.txt
-          - mkdocs serve &
-          - WAIT_TIME=0 && until nc -vzw 2 localhost 8000 || [ $WAIT_TIME -eq 5 ]; do sleep $(( WAIT_TIME++ )); done
-          - if [ $WAIT_TIME == 5 ]; then echo cannot start mkdocs server on http://localhost:8000; exit 1; fi
-          - pylinkvalidate.py -P http://localhost:8000/
-
     allow_failures:
       - env: DJANGO=master
-      - env: DOCS=links 
 
 install:
     - pip install tox tox-venv tox-travis
