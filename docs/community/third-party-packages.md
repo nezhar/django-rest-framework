@@ -288,7 +288,7 @@ To submit new content, [open an issue][drf-create-issue] or [create a pull reque
 [drf-create-issue]: https://github.com/encode/django-rest-framework/issues/new
 [authentication]: ../api-guide/authentication.md
 [permissions]: ../api-guide/permissions.md
-[third-party-packages]: ../topics/third-party-packages/#existing-third-party-packages
+[third-party-packages]: #existing-third-party-packages
 [discussion-group]: https://groups.google.com/forum/#!forum/django-rest-framework
 [djangorestframework-digestauth]: https://github.com/juanriaza/django-rest-framework-digestauth
 [django-oauth-toolkit]: https://github.com/evonove/django-oauth-toolkit

@@ -209,7 +209,7 @@ To implement a hypermedia API you'll need to decide on an appropriate media type
 [cite]: https://roy.gbiv.com/untangled/2008/rest-apis-must-be-hypertext-driven
 
 [hypermedia-docs]: rest-hypermedia-hateoas.md
-[metadata-docs]: ../api-guide/metadata/
+[metadata-docs]: ../api-guide/metadata.md
 [schemas-examples]: ../api-guide/schemas/#examples
 
 [image-drf-yasg]: ../img/drf-yasg.png
