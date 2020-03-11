@@ -218,7 +218,7 @@ project you may adjust `settings.DEFAULT_SCHEMA_CLASS`  appropriately.
 
 ### Grouping Operations With Tags
 
-Tags can be used to group logical operations. Each tag name in the list MUST be unique. 
+Tags can be used to group logical operations. Each tag name in the list MUST be unique.
 
 ---
 #### Django REST Framework generates tags automatically with the following logic:
@@ -249,7 +249,7 @@ Http Method                          |          Path           |     Tags
 -------------------------------------|-------------------------|-------------
 PUT, PATCH, GET(Retrieve), DELETE    |     /order_items/{id}/  |   ['order-items']
 POST, GET(List)                      |     /order_items/       |   ['order-items']
-   
+
 
 ---
 #### Overriding auto generated tags:
@@ -275,12 +275,12 @@ class MySchema(AutoSchema):
         if method == 'POST':
             tags = ['tag1', 'tag2']
         elif method == 'GET':
-            tags = ['tag2', 'tag3'] 
+            tags = ['tag2', 'tag3']
         elif path == '/example/path/':
             tags = ['tag3', 'tag4']
         else:
             tags = ['tag5', 'tag6', 'tag7']
-    
+
         return tags
 
 class MyView(APIView):
@@ -370,11 +370,11 @@ If you want to have more control and customization about how the schema's compon
 from rest_framework.schemas.openapi import AutoSchema
 
 class CustomSchema(AutoSchema):
-	def get_components(self, path, method):
-		# Implement your custom implementation
+    def get_components(self, path, method):
+        # Implement your custom implementation
 
-	def get_component_name(self, serializer):
-		# Implement your custom implementation
+    def get_component_name(self, serializer):
+        # Implement your custom implementation
 
 class CustomView(APIView):
     """APIView subclass with custom schema introspection."""
